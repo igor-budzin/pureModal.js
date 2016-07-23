@@ -1,0 +1,109 @@
+.modalOverlay {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  transition: 1ms opacity ease; }
+
+.pureModal {
+  position: absolute;
+  overflow: hidden;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  width: 94%;
+  min-height: 100px;
+  padding: 20px;
+  border-radius: 2px;
+  background: #fff;
+  transition: 1ms opacity ease;
+  transform: translate(-50%, -50%); }
+  .pureModal .titleArea {
+    position: absolute;
+    padding-left: 20px;
+    padding-right: 40px;
+    margin-bottom: 20px;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 54px;
+    line-height: 54px;
+    background-color: #f2f4f7;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    border-bottom: 1px solid #e7e8ec;
+    text-overflow: ellipsis; }
+
+.pureModal.pureModal-open.pureModal-anchored {
+  top: 20px;
+  transform: translate(-50%, 0); }
+
+.pureModal.pureModal-open {
+  opacity: 1; }
+
+.modalOverlay.pureModal-open {
+  opacity: 1; }
+
+.closeButton {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer; }
+  .closeButton:before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: #becad5;
+    width: 20px;
+    height: 2px;
+    transform: rotate(45deg);
+    top: 9px; }
+  .closeButton:after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: #becad5;
+    width: 20px;
+    height: 2px;
+    transform: rotate(-45deg);
+    top: 9px;
+    right: 0; }
+  .closeButton:hover:before {
+    background-color: #90a4b7; }
+  .closeButton:hover:after {
+    background-color: #90a4b7; }
+
+/* Default Animation */
+.modalOverlay.fade-and-drop {
+  display: block;
+  opacity: 0; }
+
+.pureModal.fade-and-drop {
+  top: -300%;
+  opacity: 1;
+  display: block; }
+
+.pureModal.fade-and-drop.pureModal-open {
+  top: 50%;
+  transition: 200ms top 200ms ease; }
+
+.pureModal.fade-and-drop.pureModal-open.pureModal-anchored {
+  transition: 200ms top 200ms ease; }
+
+.modalOverlay.fade-and-drop.pureModal-open {
+  top: 0;
+  transition: 200ms opacity ease;
+  opacity: 1; }
+
+.pureModal.fade-and-drop {
+  transition: 200ms top ease; }
+
+.modalOverlay.fade-and-drop {
+  transition: 200ms opacity 200ms ease; }

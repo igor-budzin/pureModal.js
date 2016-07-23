@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/pureModal.css">
+</head>
+<body>
+<a href="#" class='openLink'>Open window</a>
+<!-- JavaScript -->
+<script src="js/pureModal.js"></script>
+<script>
+	var modal = new pureModal({
+		autoOpen: true,
+		content: "Your content or link on html tag",
+		titleText: "It's modal title"
+	});
+
+	var button = document.querySelector('.openLink');
+
+	button.addEventListener('click', function() {
+		modal.open();
+	});
+</script>
+</body>
+</html>
